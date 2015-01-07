@@ -1,0 +1,14 @@
+<?php
+if (trim( $params->get( 'position' ) ) == 0){
+?>
+<iframe width="<?php echo $params->get( 'ytwidth' )-10; ?>" height="<?php echo ($params->get( 'ytwidth' )-10)*0.563; ?>" src="https://www.youtube.com/embed/<?php echo $params->get( 'ytvideolink' ); ?>" frameborder="0" allowfullscreen></iframe>
+
+<?php }
+else if (trim( $params->get( 'position' ) ) == 1){
+?>
+<iframe style="right: -44px;" width="<?php echo $params->get( 'ytwidth' )-10; ?>" height="<?php echo ($params->get( 'ytwidth' )-10)*0.563; ?>" src="https://www.youtube.com/embed/<?php echo $params->get( 'ytvideolink' ); ?>" frameborder="0" allowfullscreen></iframe>
+
+<?php
+}
+?>
+

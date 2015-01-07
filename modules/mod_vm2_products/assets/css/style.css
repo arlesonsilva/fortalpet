@@ -1,0 +1,141 @@
+﻿
+.responsive-tabs__heading { display: none;}
+.responsive-tabs__list__item { display: block; cursor:pointer; float:left;}
+			.btn:hover { background: #3cb7d3}
+			.clearfix {
+			  *zoom: 1;
+			}
+			.clearfix:before,
+			.clearfix:after {
+			  display: table;
+			  content: "";
+			}
+			.clearfix:after {
+			  clear: both;
+			}
+
+@media (max-width: 767px) {
+	.responsive-tabs__list { display: none;}
+	.responsive-tabs__heading { display: block; cursor: pointer; }
+	.responsive-tabs__panel--closed-accordion-only { display: none;}
+
+}
+
+@media (min-width: 768px) {
+	.responsive-tabs__panel--closed-accordion-only { display: block !important;}
+}
+
+/* END - Required for core functionality */
+
+
+/* OPTIONAL - Basic Skin */
+
+.responsive-tabs-wrapper { 
+	clear: both;
+	zoom: 1; 
+}
+.responsive-tabs-wrapper:before,
+.responsive-tabs-wrapper:after {
+    content: "";
+    display: table;
+} 
+.responsive-tabs-wrapper:after {
+    clear: both;
+}
+
+.responsive-tabs__heading:focus,
+.responsive-tabs__list__item:focus { outline: none !important;  }
+
+.responsive-tabs__heading--active:focus,
+.responsive-tabs__list__item--active:focus { outline: none !important;}
+
+
+.responsive-tabs__list {margin:0 0 26px 0; padding: 0; list-style:none; position:relative; z-index:99; clear:both; min-height:40px;}
+.responsive-tabs__list__item { font-size:18px; line-height:20px; color:#292f38; text-transform:uppercase; font-weight:300; padding:10px 20px; background:#ecf0f1;border-radius:5px;-webkit-transition: all 0.3s linear;-o-transition: all 0.3s linear;-moz-transition: all 0.3s linear;-ms-transition: all 0.3s linear;-kthtml-transition: all 0.3s linear;transition: all 0.3s linear; margin-right:5px; position:relative; }
+.responsive-tabs__list__item:before {-webkit-transition: all 0.3s linear;-o-transition: all 0.3s linear;-moz-transition: all 0.3s linear;-ms-transition: all 0.3s linear;-kthtml-transition: all 0.3s linear;transition: all 0.3s linear; content:" ";
+position:absolute;left:50%; bottom:0px;border-left: 9px solid rgba(0, 0, 0, 0);
+		border-right: 9px solid rgba(0, 0, 0, 0);
+		border-top: 9px solid #ecf0f1;
+		height: 9px;
+		margin-left: 2px;
+		vertical-align: middle;
+		width: 16px;
+		content:" ";
+		position:absolute;left:50%; bottom:0px;
+		margin-left:-8px; visibility:hidden;}
+
+.responsive-tabs__list__item:hover { background: #34495e; margin-top:0; color:#fff;}
+.responsive-tabs__list__item--active, 
+.responsive-tabs__list__item--active:hover { background: #34495e; margin-top:0; color:#fff; cursor:default;}
+.responsive-tabs__list__item--active:before , .responsive-tabs__list__item:hover:before {bottom:-8px; visibility:visible;border-top: 9px solid #34495e;}
+
+.responsive-tabs__panel { margin:0; padding:0; width:100%; }
+@media (max-width: 767px) {
+	.responsive-tabs__panel { margin-top:30px;}
+	.mod_vm2products .responsive-tabs__heading { 
+		padding:10px; border-radius: 5px; border: 1px solid #e5e5e5;
+		background: #eee;
+		position: relative;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight:normal;
+		top: 16px; left:0px;
+		text-transform:capitalize;
+		-webkit-transition: all 0.7s ease;
+		-moz-transition: all 0.7s ease;
+		-o-transition: all 0.7s ease;
+		-ms-transition: all 0.7s ease;
+		transition: all 0.7s ease;
+	}
+
+	.responsive-tabs__heading:after {
+		content:"";
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 40%;
+		width: 0; 
+		height: 0; 
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid #e74c3c;
+		-webkit-transition: all 0.7s ease;
+		-moz-transition: all 0.7s ease;
+		-o-transition: all 0.7s ease;
+		-ms-transition: all 0.7s ease;
+		transition: all 0.7s ease;
+	}
+	.responsive-tabs__heading:hover
+	 { background-color:  #fff;}
+	.responsive-tabs__heading--active:hover,.responsive-tabs__heading--active { background: #fff;}
+	.responsive-tabs__heading--active:after, .responsive-tabs__heading:hover:after {
+		border-bottom: 5px solid #000;
+		border-top:0;
+	 }
+	.responsive-tabs__panel div.write-reviews {
+    padding-right: 10px;
+	padding-left:0;
+    width:396px;
+	float:none;
+}
+
+.responsive-tabs__panel div.write-reviews #comment {
+    width: 385px;
+}
+
+}
+@media only screen and (max-width: 479px) {
+
+		.responsive-tabs__panel div.write-reviews {
+    padding-right: 10px;
+	padding-left:0;
+    width:280px;
+	float:none;
+}
+
+.responsive-tabs__panel div.write-reviews #comment {
+    width: 265px;
+}
+
+}
+/******************up 1.6 **************************/

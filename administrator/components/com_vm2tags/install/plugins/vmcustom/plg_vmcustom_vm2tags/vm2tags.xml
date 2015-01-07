@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="3.3" type="plugin" group="vmcustom" method="upgrade">	
+    <name>VMCustom - VM2tags</name>
+    <creationDate>May 2014</creationDate>
+    <author>Nordmograph</author>
+    <authorUrl>http://www.nordmograph.com</authorUrl>
+    <copyright>Copyright (C) 2010-2014 Nordmograph.com. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>1.5</version>
+    <description>Adds tagging feature to Virtuemart products. This plugin requires the com_vm2tags component. It also comes with its fellow (optional) search plugin extending Virtuemart product search to related product tags.</description>
+    <languages>
+        <language tag="en-GB">en-GB.plg_vmcustom_vm2tags.ini</language>
+		<language tag="fr-FR">fr-FR.plg_vmcustom_vm2tags.ini</language>
+    </languages>
+    <files>
+		<folder>css</folder>
+		<folder>js</folder>
+        <filename plugin="vm2tags">vm2tags.php</filename>
+    </files>
+    <params addpath="/administrator/components/com_virtuemart/elements">
+        <param type="vmjpluginwarning" />
+		
+    </params>
+</extension>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System - Virtuemart Slider</name>
+	<author>Lamvt (Lamvt19792003@gmail.com)</author>
+	<creationDate>July, 2012</creationDate>
+	<copyright>(C) http://joomquery.com All rights reserved.</copyright>
+	<license>http://joomquery.com</license>
+	<authorEmail>lamvt19792003@gmail.com</authorEmail>
+	<authorUrl>http://joomquery.com</authorUrl>
+	<version>2.5.0</version>
+	<description>	
+	<![CDATA[Plugin Virtuemar slider developed by Lamvt (lamvt19792003@gmail.com) http://joomquery.com, Vinaora team ! <br/ >
+		<p><strong>Joomquery.com Free Joomla templates, free Joomla extensions<br />
+			We provide the best solutions for you to choice great templates - skins for your website.
+
+Templates - Skins are semi-designed websites for you to add your contents - site map so you're ready to start website. You can edite - customize your website with any ideas.
+		</strong></p>
+		]]>
+	</description>
+	<files>
+		<filename plugin="vmslider">vmslider.php</filename>
+		<filename>vmslider.xml</filename>
+    	<filename>index.html</filename>		
+    	<folder>css</folder>		
+    	<folder>images</folder>		
+    	<folder>js</folder>		
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="spacer2" type="spacer" label="Product images Settings:" description="You can choose between these options."/>
+				<field name="imageWidth" type="text" default="250" label="Main image Width:(px)" description="Set the Main image Width. Blank will use Auto"/>
+				<field name="imageHeight" type="text" default="250" label="Main image Height:(px)" description="Main image Height. Blank will use Auto"/>
+				<field name="thumbimageWidth" type="text" default="75" label="Thumb image Width:(px)" description="Set the Thumbnail image Width. Blank will use Auto"/>
+				<field name="thumbimageHeight" type="text" default="75" label="Thumb image Height:(px)" description="Set the Thumbnail image Height. Blank will use Auto"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

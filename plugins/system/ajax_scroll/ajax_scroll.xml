@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+  <name>plg_system_ajax_scroll</name>
+  <creationDate>27.01.2014</creationDate>
+  <copyright>© 2014. All rights reserved.</copyright>
+  <license>GNU/GPL v.3 or later.</license>
+  <version>1.0</version>
+  <description>PLG_AJAX_SCROLL_XML_DESCRIPTION</description>
+  <files>
+    <filename plugin="ajax_scroll">ajax_scroll.php</filename>
+    <filename>index.html</filename>
+  </files>
+   <media destination="ajax_scroll" folder="media">
+        <filename>index.html</filename>
+        <folder>assets</folder>
+    </media>
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.plg_system_ajax_scroll.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_system_ajax_scroll.sys.ini</language>
+  </languages>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+         <field name="container" type="text" default="#slider" label="PLG_AJAX_SCROLL_CONTAINER" description="PLG_AJAX_SCROLL_CONTAINER_DESC" size="30" />
+          <field name="item" type="text" default=".item" label="PLG_AJAX_SCROLL_ITEM" description="PLG_AJAX_SCROLL_ITEM_DESC" size="30" />
+           <field name="pagination" type="text" default=".pagination.vm" label="PLG_AJAX_SCROLL_PAGINATION" description="PLG_AJAX_SCROLL_PAGINATION_DESC" size="30" />
+            <field name="next" type="text" default=".pagination.vm .next a" label="PLG_AJAX_SCROLL_NEXT" description="PLG_AJAX_SCROLL_NEXT_DESC" size="30" />
+      <field name="triggerPageThreshold" type="text" default="99999" label="PLG_AJAX_SCROLL_THRESHOLD" description="PLG_AJAX_SCROLL_THRESHOLD_DESC" size="30" />
+      </fieldset>
+    </fields>
+  </config>
+</extension>

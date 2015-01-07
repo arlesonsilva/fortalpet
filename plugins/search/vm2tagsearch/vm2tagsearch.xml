@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension version="3.3" type="plugin" group="search" method="upgrade">
+	<name>plg_search_vm2tagsearch</name>
+	<author>Adrien Roussel</author>
+	<creationDate>march 2014</creationDate>
+	<copyright>Copyright (C) 2014 Nordmograph. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>contact@nordmograph.com</authorEmail>
+	<authorUrl>www.nordmograph.com</authorUrl>
+	<version>1.0</version>
+	<description>Allows Searching of VM2Tags Component with search for product tags.</description>
+	<languages>
+	</languages>
+	<files>
+		<filename plugin="vm2tagsearch">vm2tagsearch.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="search_limit" type="text"
+					size="5"
+					default="50"
+					label="Search Limit"
+					description="Number of Search items to return"
+				/>
+				
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

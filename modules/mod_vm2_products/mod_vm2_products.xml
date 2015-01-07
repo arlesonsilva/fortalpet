@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade">
+		<name>Virtuemart2.0.x products</name> 
+		<creationDate>Jyuly 2013</creationDate>
+		<author>SomeBody</author>
+		<authorEmail>email@example.org</authorEmail>
+		<authorUrl>http://www.joomla-code.ru</authorUrl>
+		<copyright>Copyright Info</copyright>
+		<license>License Info</license>
+        <version>0.0.1</version>
+        <description></description>
+        <files>
+                <filename module="mod_vm2_products">mod_vm2_products.php</filename>
+                <filename>mod_vm2_products.xml</filename>
+				<filename>index.html</filename>				
+				<filename>helper.php</filename>
+				<folder>tmpl</folder>
+				<folder>assets</folder>
+				<folder>core</folder>
+        </files>
+			 <languages folder="languages">
+				<language tag="en-GB">en-GB.mod_vm2_products.ini</language>
+				<language tag="es-ES">es-ES.mod_vm2_products.ini</language>
+				<language tag="fr-FR">fr-FR.mod_vm2_products.ini</language>
+				<language tag="it-IT">it-IT.mod_vm2_products.ini</language>
+				<language tag="de-DE">de-DE.mod_vm2_products.ini</language>
+			</languages>
+
+		<config>
+		<fields name="params">
+		<fieldset name="feat_products"  addfieldpath="/modules/mod_vm2_products/assets/fields" label="MOD_VIRTUEMART_PRODUCT_TABS_TITLE_TEXT_FEATURED">
+
+		<field name="feat" type="radio" default="1" label="MOD_VIRTUEMART_PRODUCT_TABS_TITLE_TEXT_FEATURED_YES">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="layout_feat" type="list" default="layout"
+			label="MOD_VIRTUEMART_PRODUCT_LAYOUT"
+			description="MOD_VIRTUEMART_PRODUCT_LAYOUT_DESC">
+		    <option value="layout">MOD_VIRTUEMART_PRODUCT_DEFAULT</option>
+		    <option value="layout2">MOD_VIRTUEMART_PRODUCT_DEFAULT_2</option>
+		</field>
+			<field name="featTitle" type="text" default="Featured Products"
+			label="MOD_VIRTUEMART_PRODUCT_TITLE_TEXT"
+			 />
+		<field name="max_items_feat" type="text" default="2"
+			label="MOD_VIRTUEMART_PRODUCT_MAX_ITEMS"
+			description="MOD_VIRTUEMART_PRODUCT_MAX_ITEMS_DESC" />
+		<field name="products_per_row_feat" type="text" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_PRODUCTS_PER_ROW"
+			description="MOD_VIRTUEMART_PRODUCT_PRODUCTS_PER_ROW_DESC" />
+		<field name="stock_feat" type="list" default="0"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_STOCK">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_img_feat" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_IMAGES">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_title_feat" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_TITLE">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_desc_feat" type="list" default="1"
+			label="Display the Proct Desc?">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="row_desc_feat" type="text" default="40" size="7" label="Length of the string Desc" description="" />
+		<field name="show_cat_feat" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_CATEGORIES">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_rating_feat" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_RATING">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_price_feat" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_PRICE">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_details_feat" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_DETAILS">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_addcart_feat" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_ADDCART">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="headerText_feat" type="text" default=""
+			label="MOD_VIRTUEMART_PRODUCT_HEADER_TEXT"
+			description="MOD_VIRTUEMART_PRODUCT_HEADER_TEXT_DESC" />
+		<field name="footerText_feat" type="text" default=""
+			label="MOD_VIRTUEMART_PRODUCT_FOOTER_TEXT"
+			description="MOD_VIRTUEMART_PRODUCT_FOOTER_TEXT_DESC" />
+			
+				<field name="featured_source" type="vmproductcategories" multiple="multiple" default="" label="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_SOURCE" description="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_SOURCE_DESC"/>			
+
+				<field name="featured_outsource" type="vmproductcategories" multiple="multiple" default="" label="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_OUTSOURCE" description="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_OUTSOURCE_DESC"/>		
+
+			
+		<field name="class_sfx_feat" type="text" default="feat"
+			label="Menu Class Suffix"
+			description="A suffix to be applied to the css class of the menu items" />
+		
+		</fieldset>
+
+	</fields>	
+	
+		<fields name="params">
+		<!-- Основные параметры для модуля -->
+		<fieldset name="new_products" addfieldpath="/modules/mod_vm2_products/assets/fields" label="MOD_VIRTUEMART_PRODUCT_TABS_TITLE_TEXT_NEW">
+
+		<field name="new" type="radio" default="1" label="MOD_VIRTUEMART_PRODUCT_TABS_TITLE_TEXT_NEW_YES">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="layout_new" type="list" default="layout"
+			label="MOD_VIRTUEMART_PRODUCT_LAYOUT"
+			description="MOD_VIRTUEMART_PRODUCT_LAYOUT_DESC">
+		    <option value="layout">MOD_VIRTUEMART_PRODUCT_DEFAULT</option>
+		    <option value="layout2">MOD_VIRTUEMART_PRODUCT_DEFAULT_2</option>
+		</field>
+			<field name="newTitle" type="text" default="New Products"
+			label="MOD_VIRTUEMART_PRODUCT_TITLE_TEXT"
+			 />
+		<field name="max_items_new" type="text" default="2"
+			label="MOD_VIRTUEMART_PRODUCT_MAX_ITEMS"
+			description="MOD_VIRTUEMART_PRODUCT_MAX_ITEMS_DESC" />
+		<field name="products_per_row_new" type="text" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_PRODUCTS_PER_ROW"
+			description="MOD_VIRTUEMART_PRODUCT_PRODUCTS_PER_ROW_DESC" />
+		<field name="stock_new" type="list" default="0"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_STOCK">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_img_new" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_IMAGES">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_title_new" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_TITLE">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_desc_new" type="list" default="1"
+			label="Display the Proct Desc?">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="row_desc_new" type="text" default="40" size="7" label="Length of the string Desc" description="" />
+		<field name="show_cat_new" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_CATEGORIES">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_rating_new" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_RATING">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_price_new" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_PRICE">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_details_new" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_DETAILS">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_addcart_new" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_ADDCART">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="headerText_new" type="text" default=""
+			label="MOD_VIRTUEMART_PRODUCT_HEADER_TEXT"
+			description="MOD_VIRTUEMART_PRODUCT_HEADER_TEXT_DESC" />
+		<field name="footerText_new" type="text" default=""
+			label="MOD_VIRTUEMART_PRODUCT_FOOTER_TEXT"
+			description="MOD_VIRTUEMART_PRODUCT_FOOTER_TEXT_DESC" />
+			
+		<field name="new_source" type="vmproductcategories" multiple="multiple" default="" label="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_SOURCE" description="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_SOURCE_DESC"/>			
+
+		<field name="new_outsource" type="vmproductcategories" multiple="multiple" default="" label="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_OUTSOURCE" description="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_OUTSOURCE_DESC"/>		
+
+		<field name="class_sfx_new" type="text" default="new"
+			label="Menu Class Suffix"
+			description="A suffix to be applied to the css class of the menu items" />
+		
+		</fieldset>
+	</fields>
+		<fields name="params">
+		<!-- Основные параметры для модуля -->
+		<fieldset name="hit_products" addfieldpath="/administrator/components/com_virtuemart/elements" label="MOD_VIRTUEMART_PRODUCT_TABS_TITLE_TEXT_BESTSELLERS">
+
+		<field name="hit" type="radio" default="0" label="MOD_VIRTUEMART_PRODUCT_TABS_TITLE_TEXT_BESTSELLERS_YES">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="layout_hit" type="list" default="layout"
+			label="MOD_VIRTUEMART_PRODUCT_LAYOUT"
+			description="MOD_VIRTUEMART_PRODUCT_LAYOUT_DESC">
+		    <option value="layout">MOD_VIRTUEMART_PRODUCT_DEFAULT</option>
+		    <option value="layout2">MOD_VIRTUEMART_PRODUCT_DEFAULT_2</option>
+		</field>
+			<field name="hitTitle" type="text" default="Hit Products"
+			label="MOD_VIRTUEMART_PRODUCT_TITLE_TEXT"
+			 />
+		<field name="max_items_hit" type="text" default="2"
+			label="MOD_VIRTUEMART_PRODUCT_MAX_ITEMS"
+			description="MOD_VIRTUEMART_PRODUCT_MAX_ITEMS_DESC" />
+		<field name="products_per_row_hit" type="text" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_PRODUCTS_PER_ROW"
+			description="MOD_VIRTUEMART_PRODUCT_PRODUCTS_PER_ROW_DESC" />
+		<field name="stock_hit" type="list" default="0"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_STOCK">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_img_hit" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_IMAGES">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_title_hit" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_TITLE">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_desc_hit" type="list" default="1"
+			label="Display the Proct Desc?">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="row_desc_hit" type="text" default="40" size="7" label="Length of the string Desc" description="" />
+		<field name="show_cat_hit" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_CATEGORIES">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_rating_hit" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_RATING">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_price_hit" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_PRICE">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_details_hit" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_DETAILS">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_addcart_hit" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_ADDCART">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="headerText_hit" type="text" default=""
+			label="MOD_VIRTUEMART_PRODUCT_HEADER_TEXT"
+			description="MOD_VIRTUEMART_PRODUCT_HEADER_TEXT_DESC" />
+		<field name="footerText_hit" type="text" default=""
+			label="MOD_VIRTUEMART_PRODUCT_FOOTER_TEXT"
+			description="MOD_VIRTUEMART_PRODUCT_FOOTER_TEXT_DESC" />
+
+		<field name="class_sfx_hit" type="text" default="hit"
+			label="Menu Class Suffix"
+			description="A suffix to be applied to the css class of the menu items" />
+		
+		<field name="hit_source" type="vmproductcategories" multiple="multiple" default="" label="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_SOURCE" description="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_SOURCE_DESC"/>			
+		<field name="hit_outsource" type="vmproductcategories" multiple="multiple" default="" label="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_OUTSOURCE" description="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_OUTSOURCE_DESC"/>		
+
+	</fieldset>
+		</fields>
+		<fields name="params">
+		<!-- Основные параметры для модуля -->
+		<fieldset name="disc_products" addfieldpath="/modules/mod_vm2_products/assets/fields" label="MOD_VIRTUEMART_PRODUCT_TABS_TITLE_TEXT_SPECIALS">
+
+		<field name="disc" type="radio" default="1" label="MOD_VIRTUEMART_PRODUCT_TABS_TITLE_TEXT_SPECIALS_YES">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="layout_disc" type="list" default="layout"
+			label="MOD_VIRTUEMART_PRODUCT_LAYOUT"
+			description="MOD_VIRTUEMART_PRODUCT_LAYOUT_DESC">
+		    <option value="layout">MOD_VIRTUEMART_PRODUCT_DEFAULT</option>
+		    <option value="layout2">MOD_VIRTUEMART_PRODUCT_DEFAULT_2</option>
+		</field>
+			<field name="discTitle" type="text" default="Specials Products"
+			label="MOD_VIRTUEMART_PRODUCT_TITLE_TEXT"
+			 />
+		<field name="max_items_disc" type="text" default="2"
+			label="MOD_VIRTUEMART_PRODUCT_MAX_ITEMS"
+			description="MOD_VIRTUEMART_PRODUCT_MAX_ITEMS_DESC" />
+		<field name="products_per_row_disc" type="text" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_PRODUCTS_PER_ROW"
+			description="MOD_VIRTUEMART_PRODUCT_PRODUCTS_PER_ROW_DESC" />
+		<field name="stock_disc" type="list" default="0"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_STOCK">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_img_disc" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_IMAGES">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_title_disc" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_TITLE">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_desc_disc" type="list" default="1"
+			label="Display the Proct Desc?">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="row_desc_disc" type="text" default="40" size="7" label="Length of the string Desc" description="" />
+		<field name="show_cat_disc" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_CATEGORIES">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_rating_disc" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_RATING">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_price_disc" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_PRICE">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_details_disc" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_DETAILS">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_addcart_disc" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_ADDCART">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		
+		<field name="headerText_disc" type="text" default=""
+			label="MOD_VIRTUEMART_PRODUCT_HEADER_TEXT"
+			description="MOD_VIRTUEMART_PRODUCT_HEADER_TEXT_DESC" />
+		<field name="footerText_disc" type="text" default=""
+			label="MOD_VIRTUEMART_PRODUCT_FOOTER_TEXT"
+			description="MOD_VIRTUEMART_PRODUCT_FOOTER_TEXT_DESC" />
+		<field name="disc_source" type="vmproductcategories" multiple="multiple" default="" label="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_SOURCE" description="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_SOURCE_DESC"/>			
+
+		<field name="disc_outsource" type="vmproductcategories" multiple="multiple" default="" label="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_OUTSOURCE" description="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_OUTSOURCE_DESC"/>		
+
+		<field name="class_sfx_disc" type="text" default="disc"
+			label="Menu Class Suffix"
+			description="A suffix to be applied to the css class of the menu items" />
+		
+		</fieldset>
+	</fields>
+	
+		<fields name="params">
+		<!-- Основные параметры для модуля -->
+		<fieldset name="random_products" addfieldpath="/administrator/components/com_virtuemart/elements" label="MOD_VIRTUEMART_PRODUCT_TABS_TITLE_TEXT_RANDOM">
+
+		<field name="rand" type="radio" default="0" label="MOD_VIRTUEMART_PRODUCT_TABS_TITLE_TEXT_RANDOM_YES">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="layout_rand" type="list" default="layout"
+			label="MOD_VIRTUEMART_PRODUCT_LAYOUT"
+			description="MOD_VIRTUEMART_PRODUCT_LAYOUT_DESC">
+		    <option value="layout">MOD_VIRTUEMART_PRODUCT_DEFAULT</option>
+		    <option value="layout2">MOD_VIRTUEMART_PRODUCT_DEFAULT_2</option>
+		</field>
+			<field name="randTitle" type="text" default="Random Products"
+			label="MOD_VIRTUEMART_PRODUCT_TITLE_TEXT"
+			 />
+		<field name="max_items_random" type="text" default="2"
+			label="MOD_VIRTUEMART_PRODUCT_MAX_ITEMS"
+			description="MOD_VIRTUEMART_PRODUCT_MAX_ITEMS_DESC" />
+		<field name="products_per_row_random" type="text" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_PRODUCTS_PER_ROW"
+			description="MOD_VIRTUEMART_PRODUCT_PRODUCTS_PER_ROW_DESC" />
+		<field name="stock_rand" type="list" default="0"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_STOCK">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_img_rand" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_IMAGES">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_title_rand" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_TITLE">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_desc_rand" type="list" default="1"
+			label="Display the Proct Desc?">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="row_desc_rand" type="text" default="40" size="7" label="Length of the string Desc" description="" />
+		<field name="show_cat_rand" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_CATEGORIES">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_rating_rand" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_RATING">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_price_rand" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_PRICE">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_details_rand" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_DETAILS">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_addcart_rand" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_ADDCART">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		
+		<field name="headerText_rand" type="text" default=""
+			label="MOD_VIRTUEMART_PRODUCT_HEADER_TEXT"
+			description="MOD_VIRTUEMART_PRODUCT_HEADER_TEXT_DESC" />
+		<field name="footerText_rand" type="text" default=""
+			label="MOD_VIRTUEMART_PRODUCT_FOOTER_TEXT"
+			description="MOD_VIRTUEMART_PRODUCT_FOOTER_TEXT_DESC" />
+		<field name="rand_source" type="vmproductcategories" multiple="multiple" default="" label="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_SOURCE" description="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_SOURCE_DESC"/>			
+
+		<field name="rand_outsource" type="vmproductcategories" multiple="multiple" default="" label="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_OUTSOURCE" description="MOD_VIRTUEMART_PRODUCT_OPTION_CATEGORIES_OUTSOURCE_DESC"/>		
+
+		<field name="class_sfx_rand" type="text" default="random"
+			label="Menu Class Suffix"
+			description="A suffix to be applied to the css class of the menu items" />
+		
+		</fieldset>
+
+	</fields>
+	
+			<fields name="params">
+		<!-- Основные параметры для модуля -->
+		<fieldset name="rank_products" addfieldpath="/administrator/components/com_virtuemart/elements" label="MOD_VIRTUEMART_PRODUCT_TABS_TITLE_TEXT_TOP_RATING">
+
+		<field name="rank" type="radio" default="0" label="MOD_VIRTUEMART_PRODUCT_TABS_TITLE_TEXT_TOP_YES">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="layout_rank" type="list" default="layout"
+			label="MOD_VIRTUEMART_PRODUCT_LAYOUT"
+			description="MOD_VIRTUEMART_PRODUCT_LAYOUT_DESC">
+		    <option value="layout">MOD_VIRTUEMART_PRODUCT_DEFAULT</option>
+		    <option value="layout2">MOD_VIRTUEMART_PRODUCT_DEFAULT_2</option>
+		</field>
+			<field name="rankTitle" type="text" default="Rating Products"
+			label="MOD_VIRTUEMART_PRODUCT_TITLE_TEXT"
+			 />
+		<field name="max_items_rank" type="text" default="2"
+			label="MOD_VIRTUEMART_PRODUCT_MAX_ITEMS"
+			description="MOD_VIRTUEMART_PRODUCT_MAX_ITEMS_DESC" />
+		<field name="products_per_row_rank" type="text" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_PRODUCTS_PER_ROW"
+			description="MOD_VIRTUEMART_PRODUCT_PRODUCTS_PER_ROW_DESC" />
+		<field name="show_img_rank" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_IMAGES">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_title_rank" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_TITLE">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_desc_rank" type="list" default="1"
+			label="Display the Proct Desc?">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="row_desc_rank" type="text" default="40" size="7" label="Length of the string Desc" description="" />
+		<field name="show_cat_rank" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_CATEGORIES">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_rating_rank" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_RATING">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_price_rank" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_PRICE">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_details_rank" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_DETAILS">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="show_addcart_rank" type="list" default="1"
+			label="MOD_VIRTUEMART_PRODUCT_SHOW_ADDCART">
+		    <option value="1">JYES</option>
+		    <option value="0">JNO</option>
+		</field>
+		<field name="headerText_rank" type="text" default=""
+			label="MOD_VIRTUEMART_PRODUCT_HEADER_TEXT"
+			description="MOD_VIRTUEMART_PRODUCT_HEADER_TEXT_DESC" />
+		<field name="footerText_rank" type="text" default=""
+			label="MOD_VIRTUEMART_PRODUCT_FOOTER_TEXT"
+			description="MOD_VIRTUEMART_PRODUCT_FOOTER_TEXT_DESC" />
+
+		<field name="class_sfx_rank" type="text" default="rating"
+			label="Menu Class Suffix"
+			description="A suffix to be applied to the css class of the menu items" />
+		
+		</fieldset>
+
+	</fields>
+	
+		<fields name="params">
+		<fieldset name="advanced">
+			<field name="cache" type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		<field name="moduleclass_sfx" type="text" default=""
+				label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+				description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+		
+		</fieldset>
+
+	</fields>
+
+	
+
+    </config>
+</extension>

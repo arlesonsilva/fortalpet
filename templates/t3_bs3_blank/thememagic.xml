@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+		<!-- Sample for add or disable configuration variable -->
+		<fields name="thememagic" addfieldpath="/plugins/system/t3/includes/depend">
+			<fieldset name="scaffolding_params" label="T3_TM_SCAFFOLDING">   
+				<field name="T3HeaderFloat" type="radio" class="btn-group"
+					label="T3_TM_VARS_HEADER_INVERTED_LABEL"
+					description="T3_TM_VARS_HEADER_INVERTED_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>     
+				<field name="bodyBackground" type="color" class="t3tm-color" label="T3_TM_VARS_BODY_BKG_LABEL" description="T3_TM_VARS_BODY_BKG_DESC" />
+				<field name="headTopBackground" type="color" class="t3tm-color" label="T3_TM_VARS_BODY_BKG_LABEL_HT" description="T3_TM_VARS_BODY_BKG_DESC_HT" />
+				<field name="headTopBorderBackground" type="color" class="t3tm-color" label="T3_TM_VARS_BODY_BKG_LABEL_HTB" description="T3_TM_VARS_BODY_BKG_DESC_HTB" />
+				<field name="headRowBackground" type="color" class="t3tm-color" label="T3_TM_VARS_BODY_BKG_LABEL_HTR" description="T3_TM_VARS_BODY_BKG_DESC_HTR" />
+				<field name="navRowBackground" type="color" class="t3tm-color" label="T3_TM_VARS_BODY_BKG_LABEL_HTN" description="T3_TM_VARS_BODY_BKG_DESC_HTN" />
+				<field name="slideRowBackground" type="color" class="t3tm-color" label="T3_TM_VARS_BODY_BKG_LABEL_HTS" description="T3_TM_VARS_BODY_BKG_DESC_HTS" />
+				<field name="bannerRowBackground" type="color" class="t3tm-color" label="T3_TM_VARS_BODY_BKG_LABEL_HT_BANNER" description="T3_TM_VARS_BODY_BKG_DESC_BANNER" />
+				<field name="mainbodyRowBackground" type="color" class="t3tm-color" label="T3_TM_VARS_BODY_BKG_LABEL_MAIN_BODY" description="T3_TM_VARS_BODY_BKG_DESC_MAIN_BODY" />
+				<field name="textColor" type="color" class="t3tm-color" label="T3_TM_VARS_TEXT_COLOR_LABEL" description="T3_TM_VARS_TEXT_COLOR_DESC" />
+				<field name="linkColor" type="color" class="t3tm-color" label="T3_TM_VARS_LINK_COLOR_LABEL" description="T3_TM_VARS_LINK_COLOR_DESC" />
+				<field name="linkColorHover" type="color" class="t3tm-color" label="T3_TM_VARS_LINK_COLOR_LABEL_HOVER" description="T3_TM_VARS_LINK_COLOR_DESC_HOVER" />
+				
+				<field name="CustomColor" type="color" class="t3tm-color" label="T3_TM_VARS_CUSTOM_COLOR_LABEL" description="T3_TM_VARS_CUSTOM_COLOR_DESC" />
+				<field name="HoverCustomColor" type="color" class="t3tm-color" label="T3_TM_VARS_CUSTOM_COLOR_HOVER_LABEL" description="T3_TM_VARS_CUSTOM_HOVER_COLOR_DESC" />
+				<field name="CustomBorderColor" type="color" class="t3tm-color" label="T3_TM_VARS_CUSTOM_COLOR_BORDER_LABEL" description="T3_TM_VARS_CUSTOM_COLOR_BORDER_DESC" />
+				<field name="CustomBackgroundColor" type="color" class="t3tm-color" label="T3_TM_VARS_CUSTOM_COLOR_BKG_LABEL" description="T3_TM_VARS_CUSTOM_COLOR_BKG_DESC" />
+				
+				<field name="NavHoverColor" type="color" class="t3tm-color" label="T3_TM_VARS_NAV_COLOR_HOVER_LABEL" description="T3_TM_VARS_NAV_COLOR_HOVER_DESC" />
+				<field name="NavBorderColor" type="color" class="t3tm-color" label="T3_TM_VARS_NAV_BORDER_HOVER_LABEL" description="T3_TM_VARS_BORDER_COLOR_HOVER_DESC" />
+				
+				<field name="buttonBackground" type="color" class="t3tm-color" label="T3_TM_VARS_BUTTON_COLOR_LABEL" description="T3_TM_VARS_BUTTON_COLOR_DESC" />
+
+
+
+			</fieldset>
+			<!--<fieldset name="visual_params" label="T3_TM_VISUAL">
+
+				<field name="inputBorderRadius" type="text" class="input-tiny t3tm-dimension" 
+					label="T3_TM_VARS_ELEMENT_RADIUS_LABEL" 
+					description="T3_TM_VARS_ELEMENT_RADIUS_DESC" />
+
+				<field name="T3NavbarInverted" type="radio" class="btn-group"
+					label="T3_TM_VARS_NAVBAR_INVERTED_LABEL"
+					description="T3_TM_VARS_NAVBAR_INVERTED_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field name="T3SpotlightsInverted" type="radio" class="btn-group"
+					label="T3_TM_VARS_SPOTLIGHT_INVERTED_LABEL"
+					description="T3_TM_VARS_SPOTLIGHT_INVERTED_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>        
+			</fieldset>-->
+
+
+			<fieldset name="links_params" label="T3_THEMER_FOOTER">
+				<field name="T3FooterasideColor" type="color" class="t3tm-color" label="Footer BG Aside" description="" />
+				<field name="T3FootercopyColor" type="color" class="t3tm-color" label="Footer BG Copyright" description="T3_VARS_FOOTER_MOD_COLOR_DESC" />
+			</fieldset>
+			<fieldset name="grid_params" label="T3_TM_GRID">
+			<!-- Grid -->
+			<field name="T3gridWidth1200" type="text" default="1200px" class="input-small t3tm-dimension" label="T3_TM_VARS_SCFD_WIDE_WIDTH_LABEL" description="T3_TM_VARS_SCFD_WIDE_WIDTH_DESC" />
+			<field name="gridGutterWidth1200" type="text" default="40px" class="input-small t3tm-dimension" label="T3_TM_VARS_SCFD_WIDE_GUTTER_LABEL" description="T3_TM_VARS_SCFD_WIDE_GUTTER_DESC" />
+
+			<field name="T3gridWidth" type="text" default="940px" class="input-small t3tm-dimension" label="T3_TM_VARS_SCFD_NORMAL_WIDTH_LABEL" description="T3_TM_VARS_SCFD_NORMAL_WIDTH_DESC" />
+			<field name="gridGutterWidth" type="text" default="40px" class="input-small t3tm-dimension" label="T3_TM_VARS_SCFD_NORMAL_GUTTER_LABEL" description="T3_TM_VARS_SCFD_NORMAL_GUTTER_DESC" />
+
+			<field name="T3gridWidth980" type="text" default="940px" class="input-small t3tm-dimension" label="T3_TM_VARS_SCFD_XTABLET_WIDTH_LABEL" description="T3_TM_VARS_SCFD_XTABLET_WIDTH_DESC" />
+			<field name="gridGutterWidth980" type="text" default="40px" class="input-small t3tm-dimension" label="T3_TM_VARS_SCFD_XTABLET_GUTTER_LABEL" description="T3_TM_VARS_SCFD_XTABLET_GUTTER_DESC" />
+
+			<field name="T3gridWidth768" type="text" default="740px" class="input-small t3tm-dimension" label="T3_TM_VARS_SCFD_TABLET_WIDTH_LABEL" description="T3_TM_VARS_SCFD_TABLET_WIDTH_DESC" />
+			<field name="gridGutterWidth768" type="text" default="20px" class="input-small t3tm-dimension" label="T3_TM_VARS_SCFD_TABLET_GUTTER_LABEL" description="T3_TM_VARS_SCFD_TABLET_GUTTER_DESC" />
+			<!-- End Grid -->
+		</fieldset>
+		</fields>
+</form>

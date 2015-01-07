@@ -1,0 +1,10 @@
+<root>
+    <params name="joomlamodule" label="Joomla_module_settings">
+      <param type="list" translateable="1" name="positiontype" label="Type" default="loadposition">
+          <option value="loadposition">Loadposition - Content Load Modules plugin</option>
+          <option value="module">module - Modules Anywhere</option>
+          <option value="modulepos">modulepos - Modules Anywhere</option>
+      </param>
+      <param type="text" name="positionvalue" label="Parameter" default="" />
+    </params>
+</root>

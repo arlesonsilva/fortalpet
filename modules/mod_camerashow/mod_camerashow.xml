@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade">
+
+	<name>pr_mod_slide_show</name>
+	<creationDate>07/14/2012</creationDate>
+	<author>Mehdi</author>
+	<authorEmail>mehdi@pranon.com</authorEmail>
+	<authorUrl>http://www.pranon.com</authorUrl>
+	<copyright>Copyright (C) 2012 Open Source Matters. All rights reserved. Pranon</copyright>
+	<license>GNU/GPL</license>
+	<version>0.1</version>
+	<description>Best Image Slideshow Module is a Joomla! 2.5 Module which displays modules as a tab from joomla module manager.</description>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_camerashow.ini
+		</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_camerashow.sys.ini
+		</language>
+	</languages>
+	
+	<files>
+		<filename module="mod_camerashow">mod_camerashow.php</filename>
+		<filename>mod_camerashow.xml</filename>
+		<filename>helper.php</filename>
+		<folder>css</folder>
+		<folder>tmpl</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+	
+	<fields name="params"  >
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default=""
+				label="MOD_STYLESLIDE_MODULE_SUFX_LABEL" description="MOD_STYLESLIDE_MODULE_SUFX_DES" />
+			</fieldset>
+			  
+			<fieldset name="Image / Thumb / Caption" label="Image / Thumb / Caption">
+				<field name="mod_total_image" type="list" default="20" label="MOD_STYLESLIDE_31_LABEL" description="MOD_STYLESLIDE_31_DES">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+				</field>
+				
+				<field name="mod_1_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_70_LABEL" description="MOD_STYLESLIDE_70_DES" />
+				<field name="mod_thumb_1_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_71_LABEL" description="MOD_STYLESLIDE_71_DES" />
+				<field name="mod_image_1_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_72_LABEL" description="MOD_STYLESLIDE_72_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_2_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_73_LABEL" description="MOD_STYLESLIDE_73_DES" />
+				<field name="mod_thumb_2_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_74_LABEL" description="MOD_STYLESLIDE_74_DES" />
+				<field name="mod_image_2_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_75_LABEL" description="MOD_STYLESLIDE_75_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_3_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_76_LABEL" description="MOD_STYLESLIDE_76_DES" />
+				<field name="mod_thumb_3_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_77_LABEL" description="MOD_STYLESLIDE_77_DES" />
+				<field name="mod_image_3_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_78_LABEL" description="MOD_STYLESLIDE_78_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_4_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_79_LABEL" description="MOD_STYLESLIDE_79_DES" />
+				<field name="mod_thumb_4_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_80_LABEL" description="MOD_STYLESLIDE_80_DES" />
+				<field name="mod_image_4_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_81_LABEL" description="MOD_STYLESLIDE_81_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_5_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_82_LABEL" description="MOD_STYLESLIDE_82_DES" />
+				<field name="mod_thumb_5_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_83_LABEL" description="MOD_STYLESLIDE_83_DES" />
+				<field name="mod_image_5_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_84_LABEL" description="MOD_STYLESLIDE_84_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_6_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_85_LABEL" description="MOD_STYLESLIDE_85_DES" />
+				<field name="mod_thumb_6_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_86_LABEL" description="MOD_STYLESLIDE_86_DES" />
+				<field name="mod_image_6_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_87_LABEL" description="MOD_STYLESLIDE_87_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_7_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_88_LABEL" description="MOD_STYLESLIDE_88_DES" />
+				<field name="mod_thumb_7_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_89_LABEL" description="MOD_STYLESLIDE_89_DES" />
+				<field name="mod_image_7_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_90_LABEL" description="MOD_STYLESLIDE_90_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_8_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_91_LABEL" description="MOD_STYLESLIDE_91_DES" />
+				<field name="mod_thumb_8_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_92_LABEL" description="MOD_STYLESLIDE_92_DES" />
+				<field name="mod_image_8_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_93_LABEL" description="MOD_STYLESLIDE_93_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_9_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_94_LABEL" description="MOD_STYLESLIDE_94_DES" />
+				<field name="mod_thumb_9_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_95_LABEL" description="MOD_STYLESLIDE_95_DES" />
+				<field name="mod_image_9_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_96_LABEL" description="MOD_STYLESLIDE_96_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_10_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_97_LABEL" description="MOD_STYLESLIDE_97_DES" />
+				<field name="mod_thumb_10_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_98_LABEL" description="MOD_STYLESLIDE_98_DES" />
+				<field name="mod_image_10_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_99_LABEL" description="MOD_STYLESLIDE_99_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_11_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_100_LABEL" description="MOD_STYLESLIDE_100_DES" />
+				<field name="mod_thumb_11_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_101_LABEL" description="MOD_STYLESLIDE_101_DES" />
+				<field name="mod_image_11_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_102_LABEL" description="MOD_STYLESLIDE_102_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_12_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_103_LABEL" description="MOD_STYLESLIDE_103_DES" />
+				<field name="mod_thumb_12_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_104_LABEL" description="MOD_STYLESLIDE_104_DES" />
+				<field name="mod_image_12_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_105_LABEL" description="MOD_STYLESLIDE_105_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_13_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_106_LABEL" description="MOD_STYLESLIDE_106_DES" />
+				<field name="mod_thumb_13_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_107_LABEL" description="MOD_STYLESLIDE_107_DES" />
+				<field name="mod_image_13_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_108_LABEL" description="MOD_STYLESLIDE_108_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_14_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_109_LABEL" description="MOD_STYLESLIDE_109_DES" />
+				<field name="mod_thumb_14_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_110_LABEL" description="MOD_STYLESLIDE_110_DES" />
+				<field name="mod_image_14_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_111_LABEL" description="MOD_STYLESLIDE_111_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_15_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_112_LABEL" description="MOD_STYLESLIDE_112_DES" />
+				<field name="mod_thumb_15_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_113_LABEL" description="MOD_STYLESLIDE_113_DES" />
+				<field name="mod_image_15_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_114_LABEL" description="MOD_STYLESLIDE_114_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_16_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_115_LABEL" description="MOD_STYLESLIDE_115_DES" />
+				<field name="mod_thumb_16_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_116_LABEL" description="MOD_STYLESLIDE_116_DES" />
+				<field name="mod_image_16_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_117_LABEL" description="MOD_STYLESLIDE_117_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_17_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_118_LABEL" description="MOD_STYLESLIDE_118_DES" />
+				<field name="mod_thumb_17_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_119_LABEL" description="MOD_STYLESLIDE_119_DES" />
+				<field name="mod_image_17_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_120_LABEL" description="MOD_STYLESLIDE_120_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_18_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_121_LABEL" description="MOD_STYLESLIDE_121_DES" />
+				<field name="mod_thumb_18_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_122_LABEL" description="MOD_STYLESLIDE_122_DES" />
+				<field name="mod_image_18_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_123_LABEL" description="MOD_STYLESLIDE_123_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_19_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_124_LABEL" description="MOD_STYLESLIDE_124_DES" />
+				<field name="mod_thumb_19_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_125_LABEL" description="MOD_STYLESLIDE_125_DES" />
+				<field name="mod_image_19_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_126_LABEL" description="MOD_STYLESLIDE_126_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				<field name="mod_20_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_127_LABEL" description="MOD_STYLESLIDE_127_DES" />
+				<field name="mod_thumb_20_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_128_LABEL" description="MOD_STYLESLIDE_128_DES" />
+				<field name="mod_image_20_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_129_LABEL" description="MOD_STYLESLIDE_129_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				
+			</fieldset>
+		   <fieldset name="Slideshow Design" label="Slideshow Design">
+				<field name="mod_Slice_Cols" type="text" default="12" label="MOD_STYLESLIDE_41_LABEL" description="MOD_STYLESLIDE_41_DES" />
+				<field name="mod_Slice_Rows" type="text" default="8" label="MOD_STYLESLIDE_42_LABEL" description="MOD_STYLESLIDE_42_DES" />
+				<field name="mod_easing_effect" type="list" default="easeInOutBack" label="MOD_STYLESLIDE_33_LABEL" description="MOD_STYLESLIDE_33_DES">
+					<option value="linear">linear</option>
+					<option value="swing">swing</option>
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					<option value="easeInQuint">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeOutSine">easeOutSine</option>
+					<option value="easeInOutSine">easeInOutSine</option>
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					<option value="easeInCirc">easeInCirc</option>
+					<option value="easeOutCirc">easeOutCirc</option>
+					<option value="easeInOutCirc">easeInOutCirc</option>
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					<option value="easeInBack">easeInBack</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+				</field>
+				<field name="mod_slide_design" type="list" default="random" label="MOD_STYLESLIDE_23_LABEL" description="MOD_STYLESLIDE_23_DES">
+					<option value="random">random</option>
+					<option value="simpleFade">simpleFade</option>
+					<option value="curtainTopLeft">curtainTopLeft</option>
+					<option value="curtainTopRight">curtainTopRight</option>
+					<option value="curtainBottomLeft">curtainBottomLeft</option>
+					<option value="curtainBottomRight">curtainBottomRight</option>
+					<option value="curtainSliceLeft">curtainSliceLeft</option>
+					<option value="curtainSliceRight">curtainSliceRight</option>
+					<option value="blindCurtainTopLeft">blindCurtainTopLeft</option>
+					<option value="blindCurtainTopRight">blindCurtainTopRight</option>
+					<option value="blindCurtainBottomLeft">blindCurtainBottomLeft</option>
+					<option value="blindCurtainBottomRight">blindCurtainBottomRight</option>
+					<option value="blindCurtainSliceBottom">blindCurtainSliceBottom</option>
+					<option value="blindCurtainSliceTop">blindCurtainSliceTop</option>
+					<option value="stampede">stampede</option>
+					<option value="mosaic">mosaic</option>
+					<option value="mosaicReverse">mosaicReverse</option>
+					<option value="mosaicRandom">mosaicRandom</option>
+					<option value="mosaicSpiral">mosaicSpiral</option>
+					<option value="mosaicSpiralReverse">mosaicSpiralReverse</option>
+					<option value="topLeftBottomRight">topLeftBottomRight</option>
+					<option value="bottomRightTopLeft">bottomRightTopLeft</option>
+					<option value="bottomLeftTopRight">bottomLeftTopRight</option>
+					<option value="scrollLeft">scrollLeft</option>
+					<option value="scrollRight">scrollRight</option>
+					<option value="scrollBottom">scrollBottom</option>
+					<option value="scrollTop">scrollTop</option>
+					<option value="scrollHorz">scrollHorz</option>
+				</field>
+				<field name="mod_image_show_time" type="text" default="7000" label="MOD_STYLESLIDE_24_LABEL" description="MOD_STYLESLIDE_24_DES" />
+				<field name="mod_image_transition_time" type="text" default="1500" label="MOD_STYLESLIDE_25_LABEL" description="MOD_STYLESLIDE_25_DES" />
+		   </fieldset>
+		   
+		   <fieldset name="Loader Properties" label="Loader Properties">
+				<field name="mod_loader_type" type="list" default="pie" label="MOD_STYLESLIDE_26_LABEL" description="MOD_STYLESLIDE_26_DES">
+					<option value="pie">Pie</option>
+					<option value="bar">Bar</option>
+					<option value="none">None</option>
+				</field>
+				<field name="mod_Pie_Diameter" type="text" default="38" label="MOD_STYLESLIDE_40_LABEL" description="MOD_STYLESLIDE_40_DES" />
+				<field name="mod_pie_position" type="list" default="rightTop" label="MOD_STYLESLIDE_27_LABEL" description="MOD_STYLESLIDE_27_DES">
+					<option value="rightTop">Right Top</option>
+					<option value="leftTop">Left Top</option>
+					<option value="leftBottom">Left Bottom</option>
+					<option value="rightBottom">Right Bottom</option>
+				</field>
+				<field name="mod_bar_position" type="list" default="bottom" label="MOD_STYLESLIDE_64_LABEL" description="MOD_STYLESLIDE_64_DES">
+					<option value="bottom">bottom</option>
+					<option value="top">Top</option>
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+				</field>
+				<field name="mod_bar_direction" type="list" default="leftToRight" label="MOD_STYLESLIDE_65_LABEL" description="MOD_STYLESLIDE_65_DES">
+					<option value="leftToRight">Left To Right</option>
+					<option value="rightToLeft">Right To Left</option>
+					<option value="topToBottom">Top To Bottom</option>
+					<option value="bottomToTop">Bottom To Top</option>
+				</field>
+				<field name="mod_loader_color" type="colorpicker" label="MOD_STYLESLIDE_38_LABEL" default="#eeeeee" description="MOD_STYLESLIDE_38_DES" />
+				<field name="mod_loader_background_color" type="colorpicker" label="MOD_STYLESLIDE_39_LABEL" default="#222222" description="MOD_STYLESLIDE_39_DES" />
+				<field name="mod_loader_stroke" type="text" default="7" label="MOD_STYLESLIDE_45_LABEL" description="MOD_STYLESLIDE_45_DES" />
+				<field name="mod_loader_padding" type="text" default="2" label="MOD_STYLESLIDE_44_LABEL" description="MOD_STYLESLIDE_44_DES" />
+				<field name="mod_loader_opacity" type="list" default=".5" label="MOD_STYLESLIDE_28_LABEL" description="MOD_STYLESLIDE_28_DES">
+					<option value="0">0</option>
+					<option value=".1">.1</option>
+					<option value=".2">.2</option>
+					<option value=".3">.3</option>
+					<option value=".4">.4</option>
+					<option value=".5">.5</option>
+					<option value=".6">.6</option>
+					<option value=".7">.7</option>
+					<option value=".8">.8</option>
+					<option value=".9">.9</option>
+					<option value="1">1</option>
+				</field>
+		   </fieldset>
+		   
+		   <fieldset name="Slide Hight/Width/Position" label="Slide Hight / Width / Position">
+				<field name="mod_Image_Heihgt" type="text" default="55%" label="MOD_STYLESLIDE_29_LABEL" description="MOD_STYLESLIDE_29_DES" />
+				<field name="mod_Image_Width" type="text" default="100%" label="MOD_STYLESLIDE_52_LABEL" description="MOD_STYLESLIDE_52_DES" />
+				<field name="mod_slide_pos" type="list" default="left" label="MOD_STYLESLIDE_55_LABEL" description="MOD_STYLESLIDE_55_DES">
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+					<option value="none">Middle</option>
+				</field>
+		   </fieldset>
+		   
+			
+		   
+		   <fieldset name="Navigation and Play/Pause" label="Navigation / Play / Pause">
+				<field name="mod_navigation" type="list" default="true" label="MOD_STYLESLIDE_47_LABEL" description="MOD_STYLESLIDE_47_DES">
+					<option value="true">Enable</option>
+					<option value="false">Disable</option>
+				</field>
+				<field name="mod_navigationHover" type="list" default="true" label="MOD_STYLESLIDE_48_LABEL" description="MOD_STYLESLIDE_48_DES">
+					<option value="true">Enable</option>
+					<option value="false">Disable</option>
+				</field>
+				<field name="mod_playPause" type="list" default="true" label="MOD_STYLESLIDE_50_LABEL" description="MOD_STYLESLIDE_50_DES">
+					<option value="true">Enable</option>
+					<option value="false">Disable</option>
+				</field>
+				<field name="mod_position" type="text" default="50%" label="MOD_STYLESLIDE_53_LABEL" description="MOD_STYLESLIDE_53_DES" />
+				<field name="mod_Image_Hover" type="list" default="true" label="MOD_STYLESLIDE_37_LABEL" description="MOD_STYLESLIDE_37_DES">
+					<option value="true">Enable</option>
+					<option value="false">Disable</option>
+				</field>
+				<field name="mod_pause_click" type="list" default="true" label="MOD_STYLESLIDE_46_LABEL" description="MOD_STYLESLIDE_46_DES">
+					<option value="true">Enable</option>
+					<option value="false">Disable</option>
+				</field>
+			</fieldset>
+		   
+		   <fieldset name="Change Other Properties" label="Change Other Properties">
+				<field name="mod_Image_AutoAdvance" type="list" default="true" label="MOD_STYLESLIDE_35_LABEL" description="MOD_STYLESLIDE_35_DES">
+					<option value="true">Enable</option>
+					<option value="false">Disable</option>
+				</field>
+				<field name="mod_Image_Position" type="list" default="center" label="MOD_STYLESLIDE_34_LABEL" description="MOD_STYLESLIDE_34_DES">
+					<option value="center">Center</option>
+					<option value="topLeft">Top Left</option>
+					<option value="topCenter">Top Center</option>
+					<option value="topRight">Top Right</option>
+					<option value="centerLeft">Center Left</option>
+					<option value="centerRight">Center Right</option>
+					<option value="bottomLeft">Bottom Left</option>
+					<option value="bottomCenter">Bottom Center</option>
+					<option value="bottomRight">Bottom Right</option>
+				</field>
+				<field name="mod_thumbnails" type="list" default="visible" label="MOD_STYLESLIDE_43_LABEL" description="MOD_STYLESLIDE_43_DES">
+					<option value="visible">Enable</option>
+					<option value="hidden">Disable</option>
+				</field>
+				<field name="mod_pagination" type="list" default="true" label="MOD_STYLESLIDE_51_LABEL" description="MOD_STYLESLIDE_51_DES">
+					<option value="true">Enable</option>
+					<option value="false">Disable</option>
+				</field>
+			</fieldset>
+		   
+	</fields>	
+	</config>
+</extension>

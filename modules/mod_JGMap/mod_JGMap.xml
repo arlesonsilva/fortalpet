@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6.0" type="module" client="site" method="upgrade">
+    <name>MOD_JGMAP</name>
+    <author>Kermode Bear Software - James Hansen</author>
+    <authorEmail>kermode@kermodesoftware.com</authorEmail>
+    <authorUrl>www.kermodesoftware.com</authorUrl>
+    <creationDate>June 13, 2010</creationDate>
+    <copyright>Copyright 2011 Notice</copyright>
+    <license>GPL 3.0</license>
+    <version>1.0.37</version>
+    <description>MOD_JGMAP_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_JGMap">mod_JGMap.php</filename>
+        <filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>elements</folder>
+		<folder>tmpl</folder>
+    </files>
+    <languages folder="language">
+    	<language tag="da-DK">da-DK/da-DK.mod_JGMap.ini</language>
+    	<language tag="da-DK">da-DK/da-DK.mod_JGMap.sys.ini</language>
+    	<language tag="en-GB">en-GB/en-GB.mod_JGMap.ini</language>
+    	<language tag="en-GB">en-GB/en-GB.mod_JGMap.sys.ini</language>
+    	<language tag="fr-FR">fr-FR/fr-FR.mod_JGMap.ini</language>
+    	<language tag="fr-FR">fr-FR/fr-FR.mod_JGMap.sys.ini</language>
+    </languages>
+	<config>
+		<fields name="params" >
+			<fieldset name="basic" addfieldpath="/modules/mod_JGMap/elements">
+				<field type="text" name="width" label="MOD_JGMAP_WIDTH" description="MOD_JGMAP_WIDTH_DESC" default="200" size="4" maxlength="4" />
+				<field type="text" name="height" label="MOD_JGMAP_HEIGHT" description="MOD_JGMAP_HEIGHT_DESC" default="150" size="4" maxlength="4" />
+				<!--  <field type="text" name="mapName" label="MOD_JGMAP_MAP_NAME" description="MOD_JGMAP_MAP_NAME_DESC" default="map" /> -->
+				<field type="gmaptype" name="mapType" label="MOD_JGMAP_Map_Type" description="MOD_JGMAP_MAP_TYPE_DESC" var="map"/>
+				<field type="radio" name="smallmap" label="MOD_JGMAP_SMALL_MAP_CONTROL" description="MOD_JGMAP_SMALL_MAP_CONTROL_DESC" default="1">
+					<option value="0">JDISABLED</option>
+					<option value="1">JENABLED</option>
+				</field>
+				<field type="checkbox" name="navControls" label="MOD_JGMAP_NAVIGATION_CONTROLS"  description="MOD_JGMAP_NAVIGATION_CONTROLS" value="1"/>
+		
+				<field type="radio" name="static" label="MOD_JGMAP_STATIC_MAP_POSITION" description="MOD_JGMAP_STATIC_MAP_POSITION_DESC" default="0">
+					<option value="0">MOD_JGMAP_STATIC</option>
+					<option value="1">MOD_JGMAP_NON_STATIC</option>
+				</field>
+				<field type="text" name="lat" label="MOD_JGMAP_LATITUDE" description="MOD_JGMAP_LATITUDE_DESC" default="48.5747" />
+				<field type="text" name="lng" label="MOD_JGMAP_LONGITUDE" description="MOD_JGMAP_LONGITUDE_DESC" default="-123" />
+				<field type="text" name="zoom" label="MOD_JGMAP_ZOOM_LEVEL" description="MOD_JGMAP_ZOOM_LEVEL_DESC" default="3" />
+				<field type="gmap" name="GMap" label="MOD_JGMAP_DEFAULT_MAP_LOCATION" description="MOD_JGMAP_DEFAULT_MAP_LOCATION_DESC" />
+				<field type="gmarker" name="marker" label="MOD_JGMAP_MARKER" description="MOD_JGMAP_MARKER_DESC" />
+				<field type="hidden" name="marker_lat" label="MOD_JGMAP_MARKER_LATITUDE" description="Marker Latitude" />
+				<field type="hidden" name="marker_lng" label="MOD_JGMAP_MARKER_LONGTITUDE" description="Marker Longitude" />
+				<field type="text" name="marker_title" label="MOD_JGMAP_MARKER_TITLE" description="MOD_JGMAP_MARKER_TITLE_DESC" default=""  size="45"/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list"	default="1"
+						label="COM_MODULES_FIELD_CACHING_LABEL"
+						description="COM_MODULES_FIELD_CACHING_DESC">
+					
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text"	default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode"	type="hidden" default="static">
+					<option	value="static"></option>
+				</field>
+			
+			</fieldset>
+		</fields>
+	</config>
+</extension>

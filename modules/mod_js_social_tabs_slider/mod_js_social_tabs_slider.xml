@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade">
+        <name>JS Social Tabs Slider</name> 
+        <author>Jakub Skowroński</author> 
+        <creationDate>2013-07-15</creationDate> 
+        <copyright>Copyright (C) 2010 - http://facebooklikebox.net All rights reserved.</copyright> 
+        <license>GPL 2.0</license> 
+        <authorEmail>jakubskowronski@g.pl</authorEmail> 
+        <authorUrl>http://facebooklikebox.net</authorUrl> 
+        <version>4.5</version> 
+        <description><![CDATA[<table><tr><td><a target="_blank" href="http://facebooklikebox.net/installation"><img src="/modules/mod_js_social_tabs_slider/tmpl/images/installation.png"></a></td></tr><tr><td><a target="_blank" href="http://facebooklikebox.net/support"><img src="/modules/mod_js_social_tabs_slider/tmpl/images/support.png"></td></tr></table>]]></description>
+        <files>
+		<filename>mod_js_social_tabs_slider.xml</filename>
+                <filename module="mod_js_social_tabs_slider">mod_js_social_tabs_slider.php</filename>
+                <filename>index.html</filename>
+                <filename>helper.php</filename>
+                <filename>tmpl/default.php</filename>
+                <filename>tmpl/index.html</filename>
+		<folder>tmpl/images/</folder>
+		<folder>tmpl/css/</folder>
+		<folder>tmpl/elements/</folder>
+		<folder>tmpl/js/</folder>
+		<folder>tmpl/form/</folder>
+        </files>
+	<config>
+	<fields name="params">
+	 <fieldset name="basic">
+		<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Module Class Suffix" />
+		<field name="loadjquery" type="radio" default="1" label="Load jQuery library" description="Load jQuery library">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="click" type="radio" default="click" label="Open On" description="">
+					<option value="click">Click</option>
+		</field>
+		<field name="position" type="radio" default="0" label="Position" description="">
+			<option value="0">Right</option>
+		</field>				
+		<field name="locale" type="list" default="en_GB" label="Set locale language" description="Set locale language" >
+		<option value="af_ZA">Afrikaans</option>
+			<option value="sq_AL">Albanian</option>
+			<option value="ar_AR">Arabic</option>
+			<option value="hy_AM">Armenian</option>
+			<option value="ay_BO">Aymara</option>
+			<option value="az_AZ">Azeri</option>
+			<option value="eu_ES">Basque</option>
+			<option value="be_BY">Belarusian</option>
+			<option value="bn_IN">Bengali</option>
+			<option value="bs_BA">Bosnian</option>
+			<option value="bg_BG">Bulgarian</option>
+			<option value="ca_ES">Catalan</option>
+			<option value="ck_US">Cherokee</option>
+			<option value="hr_HR">Croatian</option>
+			<option value="cs_CZ">Czech</option>
+			<option value="da_DK">Danish</option>
+			<option value="nl_NL">Dutch</option>
+			<option value="nl_BE">Dutch (België)</option>
+			<option value="en_PI">English (Pirate)</option>
+			<option value="en_GB">English (UK)</option>
+			<option value="en_UD">English (Upside Down)</option>
+			<option value="en_US">English (US)</option>
+			<option value="eo_EO">Esperanto</option>
+			<option value="et_EE">Estonian</option>
+			<option value="fo_FO">Faroese</option>
+			<option value="tl_PH">Filipino</option>
+			<option value="fi_FI">Finnish</option>
+			<option value="fb_FI">Finnish (test)</option>
+			<option value="fr_CA">French (Canada)</option>
+			<option value="fr_FR">French (France)</option>
+			<option value="gl_ES">Galician</option>
+			<option value="ka_GE">Georgian</option>
+			<option value="de_DE">German</option>
+			<option value="el_GR">Greek</option>
+			<option value="gn_PY">Guaraní</option>
+			<option value="gu_IN">Gujarati</option>
+			<option value="he_IL">Hebrew</option>
+			<option value="hi_IN">Hindi</option>
+			<option value="hu_HU">Hungarian</option>
+			<option value="is_IS">Icelandic</option>
+			<option value="id_ID">Indonesian</option>
+			<option value="ga_IE">Irish</option>
+			<option value="it_IT">Italian</option>
+			<option value="ja_JP">Japanese</option>
+			<option value="jv_ID">Javanese</option>
+			<option value="kn_IN">Kannada</option>
+			<option value="kk_KZ">Kazakh</option>
+			<option value="km_KH">Khmer</option>
+			<option value="tl_ST">Klingon</option>
+			<option value="ko_KR">Korean</option>
+			<option value="ku_TR">Kurdish</option>
+			<option value="la_VA">Latin</option>
+			<option value="lv_LV">Latvian</option>
+			<option value="fb_LT">Leet Speak</option>
+			<option value="li_NL">Limburgish</option>
+			<option value="lt_LT">Lithuanian</option>
+			<option value="mk_MK">Macedonian</option>
+			<option value="mg_MG">Malagasy</option>
+			<option value="ms_MY">Malay</option>
+			<option value="ml_IN">Malayalam</option>
+			<option value="mt_MT">Maltese</option>
+			<option value="mr_IN">Marathi</option>
+			<option value="mn_MN">Mongolian</option>
+			<option value="ne_NP">Nepali</option>
+			<option value="se_NO">Northern Sámi</option>
+			<option value="nb_NO">Norwegian (bokmal)</option>
+			<option value="nn_NO">Norwegian (nynorsk)</option>
+			<option value="ps_AF">Pashto</option>
+			<option value="fa_IR">Persian</option>
+			<option value="pl_PL">Polish</option>
+			<option value="pt_BR">Portuguese (Brazil)</option>
+			<option value="pt_PT">Portuguese (Portugal)</option>
+			<option value="pa_IN">Punjabi</option>
+			<option value="qu_PE">Quechua</option>
+			<option value="ro_RO">Romanian</option>
+			<option value="rm_CH">Romansh</option>
+			<option value="ru_RU">Russian</option>
+			<option value="sa_IN">Sanskrit</option>
+			<option value="sr_RS">Serbian</option>
+			<option value="zh_CN">Simplified Chinese (China)</option>
+			<option value="sk_SK">Slovak</option>
+			<option value="sl_SI">Slovenian</option>
+			<option value="so_SO">Somali</option>
+			<option value="es_LA">Spanish</option>
+			<option value="es_CL">Spanish (Chile)</option>
+			<option value="es_CO">Spanish (Colombia)</option>
+			<option value="es_MX">Spanish (Mexico)</option>
+			<option value="es_ES">Spanish (Spain)</option>
+			<option value="es_VE">Spanish (Venezuela)</option>
+			<option value="sw_KE">Swahili</option>
+			<option value="sv_SE">Swedish</option>
+			<option value="sy_SY">Syriac</option>
+			<option value="tg_TJ">Tajik</option>
+			<option value="ta_IN">Tamil</option>
+			<option value="tt_RU">Tatar</option>
+			<option value="te_IN">Telugu</option>
+			<option value="th_TH">Thai</option>
+			<option value="zh_HK">Traditional Chinese (Hong Kong)</option>
+			<option value="zh_TW">Traditional Chinese (Taiwan)</option>
+			<option value="tr_TR">Turkish</option>
+			<option value="uk_UA">Ukrainian</option>
+			<option value="ur_PK">Urdu</option>
+			<option value="uz_UZ">Uzbek</option>
+			<option value="vi_VN">Vietnamese</option>
+			<option value="cy_GB">Welsh</option>
+			<option value="xh_ZA">Xhosa</option>
+			<option value="yi_DE">Yiddish</option>
+			<option value="zu_ZA">Zulu</option>
+			</field>
+		<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; text-align:center; background:#3c95d9;&quot;&gt;Facebook&lt;/div&gt;" />		
+		<field name="facebook" type="radio" default="1" label="Display Facebook tab" description="Display Facebook tab">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="fbtop" type="text" default="100" label="Margin top" description="Default: 100" />		
+		<field name="profile_id" type="text" default="303260436387098" label="Facebook ID" description="Page ID of the Facebook" />
+		<field name="stream" type="radio" default="false" label="Display stream" description="Display stream">
+			<option value="false">No</option>
+			<option value="true">Yes</option>
+		</field>	
+		<field name="fbwidth" type="text" default="290" label="Width" description="Default: 290" />
+		<field name="fbheight" type="text" default="340" label="Height" description="Default: 430" />
+		<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; text-align:center; background:#3c95d9;&quot;&gt;Twitter&lt;/div&gt;" />
+		<field name="twitter" type="radio" default="1" label="Display Twitter tab" description="Display Twitter tab">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>	
+		<field name="twtop" type="text" default="170" label="Margin top" description="Default: 170" />		
+		<field name="twitter_login" type="text" default="twitter" label="Twitter ID" description="Twitter ID i.eg: twitter" />
+		<field name="twwidgetid" type="text" default="" label="Twitter widget ID" description="Twitter ID i.eg: twitter" />
+		<field name="twwidth" type="text" default="290" label="Width" description="Default: 290" />
+		<field name="twheight" type="text" default="430" label="Height" description="Default: 330" />
+		<field name="twtheme" type="radio" default="dark" label="Theme" description="Theme">
+			<option value="light">Light</option>
+			<option value="dark">Dark</option>
+		</field>
+		
+		<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; text-align: center; background:#3c95d9;&quot;&gt;Youtube&lt;/div&gt;" />				
+		<field name="youtube" type="radio" default="1" label="Display Youtube tab" description="Display Youtube tab">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="yttop" type="text" default="310" label="Margin top" description="Default: 310" />		
+		<field name="ytwidth" type="text" default="290" label="Width" description="Default: 290" />		
+		<field name="ytheight" type="text" default="270" label="Height" description="Default: 270" />
+		<field name="youtube_link" type="textarea" rows="1" cols="40" default="vevo" label="Youtube Username" description="Youtube username" />
+		<field name="ytvideolink" type="text" default="s8DEFDVEdNU" label="Movie url" description="http://www.youtube.com/watch?v=yourmovie" />
+		
+		<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; text-align: center; background:#3c95d9;&quot;&gt;Contact Us&lt;/div&gt;" />				
+		<field name="contactus" type="radio" default="1" label="Contact form" description="Display Ajax Contact Form">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="contacttop" type="text" default="590" label="Margin top" description="Default: 590" />	
+		<field name="contactemail" type="text" default="" label="Email" description="Your email" />		
+		<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; text-align: center; background:#3c95d9;&quot;&gt;Translation&lt;/div&gt;" />						
+		<field name="contactheader" type="text" default="Please fill in the following form to contact us" label="Header" description="Header" />	
+		<field name="contactname" type="text" default="Name" label="Name" description="" />	
+		<field name="contactmail" type="text" default="E-mail" label="E-mail" description="" />	
+		<field name="contactsubject" type="text" default="Subject" label="Subject" description="" />	
+		<field name="contactcomment" type="text" default="Your comments" label="Message" description="" />	
+		<field name="contacthuman" type="text" default="Are you human?" label="Anti-Spam" description="" />	
+		<field name="contactbutton" type="text" default="Submit" label="Send button" description="" />	
+		<field name="contactsent" type="text" default="Email Sent Successfully." label="Email Sent" description="" />	
+		<field name="contactthanks" type="text" default="Thank you" label="Thank you" description="" />	
+		<field name="contactmsgsubmitted" type="text" default="your message has been submitted to us." label="Message submitted" description="" />	
+		<field name="errorname" type="text" default="Attention! You must enter your name." label="Error - name" description="" />	
+		<field name="erroremail" type="text" default="Attention! Please enter a valid email address." label="Error - email" description="" />	
+		<field name="erroremailinvalid" type="text" default="Attention! You have enter an invalid e-mail address, try again." label="Error - invalid email" description="" />	
+		<field name="errorsubject" type="text" default="Attention! Please enter a subject." label="Error - subject" description="" />	
+		<field name="errorcomments" type="text" default="Attention! Please enter your message." label="Error - comments" description="" />	
+		<field name="errorcaptcha" type="text" default="Attention! Please enter the verification number." label="Error - captcha" description="" />	
+		<field name="errorcaptchainvalid" type="text" default="Attention! The verification number you entered is incorrect." label="Error - incorrect captcha" description="" />	
+		
+	 </fieldset>
+	</fields>
+    </config>
+</extension>
